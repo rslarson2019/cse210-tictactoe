@@ -140,6 +140,9 @@
     {
         Console.WriteLine($"{currentPlayer}'s turn to choose a square (1-9): ");
         string? input = Console.ReadLine();
+        if (input is null){
+            return 0;
+        }
         int check = int.Parse(input);
         return check;
     }
